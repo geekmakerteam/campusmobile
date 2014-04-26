@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+    </style>
+
+<!---->
+    <style name="CustomTitlePageIndicator">
+        <item name="android:background">#18FF0000</item>
+        <item name="footerColor">@color/ORANGE</item>
+        <item name="footerLineHeight">1dp</item>
+        <item name="footerIndicatorHeight">3dp</item>
+        <item name="footerIndicatorStyle">underline</item>
+        <item name="android:textColor">@color/WET_ASPHALT</item>
+        <item name="selectedColor">@color/MIDNIGHT_BLUE</item>
+        <item name="selectedBold">true</item>
+    </style>
+<!---->
+
+
+
+
+
+
+</resources>

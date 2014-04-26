@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/background_card">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/name"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/section"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/section"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/place"
+        android:layout_below="@+id/name"
+        android:layout_alignLeft="@+id/name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/week"
+        android:layout_below="@+id/place"
+        android:layout_alignLeft="@+id/place"
+        android:layout_alignStart="@+id/place" />
+</RelativeLayout>
