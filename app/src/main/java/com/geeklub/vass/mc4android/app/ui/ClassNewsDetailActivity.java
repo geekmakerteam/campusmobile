@@ -36,6 +36,7 @@ public class ClassNewsDetailActivity extends ActionBarActivity {
 
         classNews = getIntent().getParcelableExtra("classNews");
 
+
         initView();
 
     }

@@ -32,6 +32,7 @@ public class TodayCoursesFragment extends Fragment implements AdapterView.OnItem
     @InjectView(R.id.imageView)
     ImageView mEmptyView;
 
+
     private String tag = "TodayCoursesFragment";
 
 
@@ -60,6 +61,7 @@ public class TodayCoursesFragment extends Fragment implements AdapterView.OnItem
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_today_courses,null);
 
+
         ButterKnife.inject(this, view);
         mListView.setOnItemClickListener(this);
         AnimationAdapter animAdapter = new SwingBottomInAnimationAdapter(mAdapter);
@@ -79,6 +81,7 @@ public class TodayCoursesFragment extends Fragment implements AdapterView.OnItem
 
             mEmptyView.setVisibility(View.VISIBLE);
             mListView.setEmptyView(mEmptyView);
+
         }
     }
 

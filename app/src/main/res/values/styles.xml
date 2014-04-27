@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-<!---->
+<!--自定义的title指示器-->
     <style name="CustomTitlePageIndicator">
         <item name="android:background">#18FF0000</item>
         <item name="footerColor">@color/ORANGE</item>
@@ -17,6 +17,22 @@
         <item name="selectedBold">true</item>
     </style>
 <!---->
+
+
+<!--Actionbar-->
+    <style name="CustomActionBarTheme" parent="@style/AppTheme">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/POMEGRANATE</item>
+    </style>
+<!---->
+
+
+
+
+
 
 
 

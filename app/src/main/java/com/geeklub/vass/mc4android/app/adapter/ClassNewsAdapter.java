@@ -28,12 +28,12 @@ public class ClassNewsAdapter extends BaseAdapter {
     public ClassNewsAdapter(List<ClassNews> data, Context context) {
         mData = data;
         mInflater = LayoutInflater.from(context);
+
         mBackgroundColors.add(R.color.ALIZARIN);
         mBackgroundColors.add(R.color.ORANGE);
         mBackgroundColors.add(R.color.BELIZE_HOLE);
         mBackgroundColors.add(R.color.CONCRETE);
         mBackgroundColors.add(R.color.CARROT);
-
     }
 
     @Override

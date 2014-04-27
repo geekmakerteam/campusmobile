@@ -2,20 +2,6 @@
 <resources>
 
 
-    <style name="CustomActionBarTheme" parent="@style/Theme.AppCompat.Light">
-        <item name="android:actionBarStyle">@style/MyActionBar</item>
-
-    </style>
-
-
-    <!-- ActionBar styles -->
-    <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/POMEGRANATE</item>
-
-    </style>
-
-
-
 
 
 

@@ -53,6 +53,8 @@ public class CallNamesFragment extends Fragment implements OnDismissCallback,Con
     private boolean mDismiss;
 
     private List<Student> mList = new ArrayList<Student>();
+    private int mTotal;
+
     private CallNamesAdapter mAdapter;
     private SwipeDismissAdapter mSwipeDismissAdapter;
     private String tag = "CallNamesFragment";
@@ -109,7 +111,11 @@ public class CallNamesFragment extends Fragment implements OnDismissCallback,Con
                 CallNamesResult datas = FastJSONUtil.getObject(content, CallNamesResult.class);
                 List<Student> students = datas.getUsers();
 
-                initHeaderView(datas.getTotal(),students.size());
+                mTotal = datas.getTotal();
+
+//                initHeaderView(datas.getTotal(),students.size());
+
+                initHeaderView(mTotal,students.size());
 
                 mList.addAll(students);
                 mAdapter.notifyDataSetChanged();
@@ -184,33 +190,57 @@ public class CallNamesFragment extends Fragment implements OnDismissCallback,Con
 
         for (int position : reverseSortedPositions) {
             Log.i(tag,"position ===>" + position);
-            removeStudent(mAdapter.getItem(position));
+//            removeStudent(mAdapter.getItem(position));
+            removeStudent(mAdapter, ((Student) mAdapter.getItem(position)));
             mAdapter.remove(position);
         }
     }
 
-    private void removeStudent(final Object student) {
-
-        MCRestClient.get(API.HELP_SIGN, new APIParams().with("signId", ((Student) student).getId()).with("status", "1"), new JsonHttpResponseHandler() {
+    private void removeStudent(final CallNamesAdapter mAdapter, final Student student) {
+        MCRestClient.get(API.HELP_SIGN,new APIParams().with("signId", student.getId()).with("status", "1"),new JsonHttpResponseHandler(){
             @Override
             public void onSuccess(int statusCode, JSONObject response) {
                 super.onSuccess(statusCode, response);
-                Log.i("student", response.toString());
+
                 try {
                     if (response.getBoolean("status")) {
-                        SuperToast.create(MCApplication.getApplication(), "学生:"+((Student)student).getUserName() + "补签成功...", SuperToast.Duration.SHORT,
+                        SuperToast.create(MCApplication.getApplication(), "学生:" + student.getUserName() + "补签成功...", SuperToast.Duration.SHORT,
                                 Style.getStyle(Style.GREEN, SuperToast.Animations.FLYIN)).show();
+
+                        initHeaderView(mTotal,mAdapter.getCount());
+
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-
-            @Override
-            public void onFailure(Throwable error, String content) {
-                super.onFailure(error, content);
-                Log.i("error", content.toString());
-            }
-        }, MCApplication.getApplication());
+        },MCApplication.getApplication());
     }
+
+
+//    private void removeStudent(final Object student) {
+//
+//        MCRestClient.get(API.HELP_SIGN, new APIParams().with("signId", ((Student) student).getId()).with("status", "1"), new JsonHttpResponseHandler() {
+//            @Override
+//            public void onSuccess(int statusCode, JSONObject response) {
+//                super.onSuccess(statusCode, response);
+//                Log.i("student", response.toString());
+//                try {
+//                    if (response.getBoolean("status")) {
+//                        SuperToast.create(MCApplication.getApplication(), "学生:"+((Student)student).getUserName() + "补签成功...", SuperToast.Duration.SHORT,
+//                                Style.getStyle(Style.GREEN, SuperToast.Animations.FLYIN)).show();
+//
+//                    }
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Throwable error, String content) {
+//                super.onFailure(error, content);
+//                Log.i("error", content.toString());
+//            }
+//        }, MCApplication.getApplication());
+//    }
 }

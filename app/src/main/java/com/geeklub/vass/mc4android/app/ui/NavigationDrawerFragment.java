@@ -21,9 +21,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.geeklub.vass.mc4android.app.R;
+import com.geeklub.vass.mc4android.app.adapter.DrawerMenuAdapter;
+import com.geeklub.vass.mc4android.app.beans.DrawerMenuItem;
 import com.geeklub.vass.mc4android.app.beans.LoginStatus;
 import com.geeklub.vass.mc4android.app.common.API;
 import com.geeklub.vass.mc4android.app.utils.FastJSONUtil;
@@ -31,6 +32,7 @@ import com.geeklub.vass.mc4android.app.utils.MCApplication;
 import com.geeklub.vass.mc4android.app.utils.MCRestClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -70,6 +72,8 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
     private String tag = "NavigationDrawerFragment";
+
+    private List<DrawerMenuItem> mList  = new ArrayList<DrawerMenuItem>();
 
     public NavigationDrawerFragment() {
     }
@@ -112,8 +116,7 @@ public class NavigationDrawerFragment extends Fragment {
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.i(tag,"onItemClick ===>"+(String) parent.getItemAtPosition(position));
-                selectItem(position, (String) parent.getItemAtPosition(position));
+                selectItem(position, ((DrawerMenuItem) parent.getItemAtPosition(position)).getmNameRes());
             }
         });
         loadData();
@@ -136,30 +139,19 @@ public class NavigationDrawerFragment extends Fragment {
 
     private void initView(List<String> datas) {
         if (datas.contains("student")) {
-            mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                    getActionBar().getThemedContext(),
-                    android.R.layout.simple_list_item_1,
-                    android.R.id.text1,
-                    new String[]{
-                            getString(R.string.school_news),
-                            getString(R.string.class_news),
-                            getString(R.string.time_table),
-                            getString(R.string.sign_in)
-                    }
-            ));
+            mList.add(new DrawerMenuItem(R.string.school_news,R.drawable.school_news_icon_src));
+            mList.add(new DrawerMenuItem(R.string.class_news,R.drawable.class_news_icon_src));
+            mList.add(new DrawerMenuItem(R.string.time_table,R.drawable.time_table_icon_src));
+            mList.add(new DrawerMenuItem(R.string.sign_in,R.drawable.sign_in_icon_src));
+
+            mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
         }
 
         if (datas.contains("teacher")) {
-            mDrawerListView.setAdapter(new ArrayAdapter<String>(
-                    getActionBar().getThemedContext(),
-                    android.R.layout.simple_list_item_1,
-                    android.R.id.text1,
-                    new String[]{
-                            getString(R.string.school_news),
-                            getString(R.string.call_names),
-                            getString(R.string.release_notices),
-                    }
-            ));
+            mList.add(new DrawerMenuItem(R.string.school_news,R.drawable.school_news_icon_src));
+            mList.add(new DrawerMenuItem(R.string.call_names,R.drawable.call_names_icon_src));
+
+            mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
         }
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
     }

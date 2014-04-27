@@ -18,6 +18,8 @@ import com.geeklub.vass.mc4android.app.utils.FastJSONUtil;
 import com.geeklub.vass.mc4android.app.utils.MCApplication;
 import com.geeklub.vass.mc4android.app.utils.MCRestClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.nhaarman.listviewanimations.swinginadapters.AnimationAdapter;
+import com.nhaarman.listviewanimations.swinginadapters.prepared.SwingLeftInAnimationAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +35,7 @@ public class SchoolNewsFragment extends Fragment implements AdapterView.OnItemCl
     private OnFragmentInteractionListener mListener;
     private List<EachNews> mList = new ArrayList<EachNews>();
     private SchoolNewsAdapter mAdapter;
+    private AnimationAdapter  animationAdapter;
 
 
     public static SchoolNewsFragment newInstance() {
@@ -53,6 +56,7 @@ public class SchoolNewsFragment extends Fragment implements AdapterView.OnItemCl
         if (getArguments() != null) {
             mAdapter = new SchoolNewsAdapter(mList, getActivity());
 
+            animationAdapter = new SwingLeftInAnimationAdapter(mAdapter);
         }
     }
 
@@ -64,7 +68,8 @@ public class SchoolNewsFragment extends Fragment implements AdapterView.OnItemCl
 
         mListView.setOnItemClickListener(this);
 
-        mListView.setAdapter(mAdapter);
+        animationAdapter.setAbsListView(mListView);
+        mListView.setAdapter(animationAdapter);
         return view;
     }
 

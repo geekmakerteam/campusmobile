@@ -16,6 +16,7 @@ import com.geeklub.vass.mc4android.app.utils.LoginUtil;
 import com.geeklub.vass.mc4android.app.utils.MCApplication;
 import com.geeklub.vass.mc4android.app.utils.MCRestClient;
 import com.github.johnpersano.supertoasts.SuperActivityToast;
+import com.github.johnpersano.supertoasts.SuperCardToast;
 import com.github.johnpersano.supertoasts.SuperToast;
 import com.github.johnpersano.supertoasts.util.Style;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -75,6 +76,8 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                 try {
                     if (response.getBoolean("status")) {
                         finish();
+
+                        showSuperToast();
                         LoginUtil.setUserName(MCApplication.getApplication(), userName);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
@@ -111,11 +114,10 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
     }
 
 
-    private void superToastProgressBar(){
-        SuperActivityToast superActivityToast = new SuperActivityToast(LoginActivity.this, SuperToast.Type.PROGRESS);
-        superActivityToast.setText("Hello world!");
-        superActivityToast.setIndeterminate(true);
-        superActivityToast.setProgressIndeterminate(true);
-        superActivityToast.show();
+    private void showSuperToast(){
+        SuperToast.create(this, "登陆成功...", SuperToast.Duration.SHORT,
+                Style.getStyle(Style.GREEN, SuperToast.Animations.FLYIN)).show();
     }
+
+
 }

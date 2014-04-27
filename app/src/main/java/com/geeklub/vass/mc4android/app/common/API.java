@@ -13,7 +13,7 @@ public class API {
     /**学院新闻*/
     public final static String SCHOOL_NEWS = "/api/news/";
     /**班级通知*/
-    public final static String CLASS_NEWS = "/api/classnews";
+    public final static String CLASS_NEWS = "/api/classnews?page=";
     /**课程*/
     public final static String COURSE = "api/course";
     /**今天的课程*/

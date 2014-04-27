@@ -2,7 +2,7 @@
 
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <solid android:color="@color/SILVER" />
+    <solid android:color="@color/TRANSPARRENT_SILVER" />
     <!-- 设置圆角
     注意： bottomRightRadius是左下角而不是右下角  bottomLeftRadius右下角-->
     <corners android:topLeftRadius="10dp" android:topRightRadius="10dp"

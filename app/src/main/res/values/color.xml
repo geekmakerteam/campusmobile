@@ -9,7 +9,7 @@
     <color name="AMETHYST">#9b59b6</color>
     <color name="WISTERIA">#9b59b6</color>
     <color name="WET_ASPHALT">#34495e</color>
-    <color name="MIDNIGHT_BLUE">#34495e</color>
+    <color name="MIDNIGHT_BLUE">#2c3e50</color>
     <color name="ORANGE">#f39c12</color>
     <color name="SUN_FLOWER">#f1c40f</color>
     <color name="CARROT">#e67e22</color>
@@ -20,5 +20,15 @@
     <color name="SILVER">#bdc3c7</color>
     <color name="CONCRETE">#95a5a6</color>
     <color name="ASBESTOS">#7f8c8d</color>
+    <color name="Transparent">#702c3e50</color>
 
+
+    <color name="TRANSPARRENT_SILVER">#50bdc3c7</color>
+
+    <integer-array name="gplus_colors">
+        <item>@color/TURQUOISE</item>
+        <item>@color/SUN_FLOWER</item>
+        <item>@color/BELIZE_HOLE</item>
+        <item>@color/POMEGRANATE</item>
+    </integer-array>
 </resources>
