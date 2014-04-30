@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import com.geeklub.vass.mc4android.app.R;
 import com.geeklub.vass.mc4android.app.adapter.SchoolNewsAdapter;
 import com.geeklub.vass.mc4android.app.beans.schoolnews.EachNews;
@@ -20,13 +19,14 @@ import com.geeklub.vass.mc4android.app.utils.MCRestClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.nhaarman.listviewanimations.swinginadapters.AnimationAdapter;
 import com.nhaarman.listviewanimations.swinginadapters.prepared.SwingLeftInAnimationAdapter;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
+/**
+ * 学院新闻
+ */
 public class SchoolNewsFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     @InjectView(R.id.listView)

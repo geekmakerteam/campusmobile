@@ -122,7 +122,7 @@ public class NavigationDrawerFragment extends Fragment {
         loadData();
         return mDrawerListView;
     }
-
+//获取数据
     private void loadData() {
         MCRestClient.get(API.LOGIN_STATUS, null, new AsyncHttpResponseHandler() {
             @Override
@@ -136,7 +136,7 @@ public class NavigationDrawerFragment extends Fragment {
             }
         }, MCApplication.getApplication());
     }
-
+//生成界面
     private void initView(List<String> datas) {
         if (datas.contains("student")) {
             mList.add(new DrawerMenuItem(R.string.school_news,R.drawable.school_news_icon_src));
@@ -153,6 +153,7 @@ public class NavigationDrawerFragment extends Fragment {
 
             mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
         }
+
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
     }
 

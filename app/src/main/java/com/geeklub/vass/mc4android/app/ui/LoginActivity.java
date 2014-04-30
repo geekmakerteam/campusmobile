@@ -24,7 +24,9 @@ import org.json.JSONObject;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-
+/**
+ * 登陆的Activity
+ */
 public class LoginActivity extends ActionBarActivity implements View.OnClickListener {
 
     @InjectView(R.id.username_edit)
@@ -70,7 +72,7 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
     //登陆验证身份
     private void verify() {
         MCRestClient.post(API.LOGIN, new APIParams().with("username", userName).with("password", passWord), new JsonHttpResponseHandler() {
-            @Override
+                @Override
             public void onSuccess(int statusCode, JSONObject response) {
                 super.onSuccess(statusCode, response);
                 try {
@@ -86,6 +88,7 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
                 }
             }
+
         }, MCApplication.getApplication());
     }
 

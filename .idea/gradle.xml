@@ -8,11 +8,11 @@
         <option name="gradleHome" value="$USER_HOME$/.gradle/wrapper/dists/gradle-1.10-all" />
         <option name="modules">
           <set>
-            <option value="C:\Users\hp\Documents\GitHub\MC4android" />
-            <option value="C:\Users\hp\Documents\GitHub\MC4android\app" />
-            <option value="C:\Users\hp\Documents\GitHub\MC4android\extras" />
-            <option value="C:\Users\hp\Documents\GitHub\MC4android\extras\zxingfragmentlib-master" />
-            <option value="C:\Users\hp\Documents\GitHub\MC4android\extras\zxingfragmentlib-master\library" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/extras" />
+            <option value="$PROJECT_DIR$/extras/zxingfragmentlib-master" />
+            <option value="$PROJECT_DIR$/extras/zxingfragmentlib-master/library" />
           </set>
         </option>
       </GradleProjectSettings>
