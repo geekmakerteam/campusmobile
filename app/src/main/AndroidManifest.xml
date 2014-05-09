@@ -1,0 +1,183 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geeklub.vass.mc4android.app"
+    android:versionCode="5"
+    android:versionName="1.3">
+    <!---->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!---->
+    <!---->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <!---->
+
+    <application
+        android:name=".utils.MCApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomActionBarTheme">
+        <activity
+            android:name="com.geeklub.vass.mc4android.app.ui.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.geeklub.vass.mc4android.app.ui.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!---->
+        <activity
+            android:name="com.geeklub.vass.mc4android.app.ui.SchoolNewsDetailActivity"
+            android:label="@string/title_activity_school_news_detail" >
+        </activity>
+        <activity
+            android:name="com.geeklub.vass.mc4android.app.ui.ClassNewsDetailActivity"
+            android:label="@string/title_activity_class_news_detail" >
+        </activity>
+        <activity
+            android:name="com.geeklub.vass.mc4android.app.ui.teacher.CallNamesActivity"
+            android:label="@string/title_activity_call_names" >
+        </activity>
+
+        <activity android:name="com.geeklub.vass.mc4android.app.ui.RosterListActivity">
+        </activity>
+
+        <activity android:name="com.geeklub.vass.mc4android.app.ui.AddFriendActivity" />
+        <activity android:name="com.geeklub.vass.mc4android.app.ui.HistoryActivity" />
+        <activity android:name=".ui.ChangePasswordActivity" />
+        <activity android:name=".ui.GroupActivity"/>
+
+        <activity android:name=".feedback.FeedbackRecordActivity"
+                  android:theme="@android:style/Theme.NoTitleBar" />
+        <!---->
+
+        <!-- http://appkefu.com/AppKeFu/admin/ -->
+        <meta-data
+            android:name="com.appkefu.lib.appkey"
+            android:value="e9c8c311cd5af8680f86545bc5a3d12d" />
+
+        <!-- 聊天窗口, 可通过修改layout文件appkefu_chat_activity.xml自定义窗口UI -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFChatActivity" />
+        <!-- 客服个人资料窗口 -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFProfileActivity" />
+        <!-- 验证消息窗口，可通过修改layout文件appkefu_activity_subscribe_notification.xml自定义窗口UI -->
+        <activity android:name="com.appkefu.lib.ui.activity.KFSubscribeNotificationActivity" />
+        <!-- 选择图片 -->
+        <activity
+            android:name="com.appkefu.lib.ui.activity.KFSelectPicActivity"
+            android:theme="@style/appkefu_dialog_style_bottom" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCChatActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCProfileActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCInvitationNotificationActivity"/>
+        <activity android:name=".ui.ProfileActivity"/>
+        <activity android:name=".ui.ProfileChangeActivity"/>
+        <activity android:name=".ui.ProfileFriendActivity"/>
+        <activity android:name="com.umeng.fb.ConversationActivity"/>
+        <activity android:name="com.umeng.fb.ContactActivity"/>
+        <activity android:name=".ui.HomeworkActivity"/>
+        <activity android:name=".ui.HomeworkFileActivity"/>
+
+        <service
+            android:name="com.umeng.common.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+
+     <!--   <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>-->
+
+        <!-- 发送语音辅助service -->
+        <service
+            android:name="com.appkefu.lib.soundrecorder.KFRecorderService"
+            android:exported="false" >
+        </service>
+
+        <!-- 主service -->
+        <service
+            android:name="com.appkefu.lib.service.KFMainService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.CONNECT" />
+                <action android:name="com.appkefu.lib.action.DISCONNECT" />
+                <action android:name="com.appkefu.lib.action.TOGGLE" />
+                <action android:name="com.appkefu.lib.action.SEND" />
+                <action android:name="com.appkefu.lib.action.NETWORK_STATUS_CHANGED" />
+                <action android:name="com.appkefu.lib.action.XMPP.MESSAGE_RECEIVED" />
+                <action android:name="com.appkefu.lib.action.PRESENCE_CHANGED" />
+                <action android:name="com.appkefu.lib.action.MUC_INVITATION" />
+            </intent-filter>
+        </service>
+
+        <!--  -->
+        <receiver
+            android:name="com.appkefu.lib.receivers.KFPublicIntentReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.appkefu.lib.action.CONNECT" />
+                <action android:name="com.appkefu.lib.action.DISCONNECT" />
+                <action android:name="com.appkefu.lib.action.TOGGLE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 开机自动建立连接 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 连接电源自动建立连接 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFPowerReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听网络变化 -->
+        <receiver
+            android:name="com.appkefu.lib.receivers.KFNetworkConnectivityReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 检测链接状态 -->
+        <receiver android:name="com.appkefu.lib.receivers.KFAlarmReceiver" >
+            <intent-filter> 
+                <action android:name="com.appkefu.lib.action.LOGIN_ALARM" />
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5368f75a56240b64c40423ea" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Default" />
+    </application>
+</manifest>

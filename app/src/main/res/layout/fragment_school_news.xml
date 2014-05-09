@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:myattr="http://schemas.android.com/apk/res/com.geeklub.vass.mc4android.app.fragment"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              tools:context="com.geeklub.vass.mc4android.app.fragment.SchoolNewsFragment">
+
+    <com.geeklub.vass.mc4android.app.fragment.SlidingSwitcherView
+        android:id="@+id/slidingLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/image2" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/image1" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/image3" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/image4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dip"
+            android:layout_height="20dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dip"
+            android:orientation="horizontal"
+            >
+        </LinearLayout>
+    </com.geeklub.vass.mc4android.app.fragment.SlidingSwitcherView>
+    <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+               android:background="@drawable/bg">
+        <ListView
+            android:divider="@null"
+            android:dividerHeight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listView"
+            android:padding="8dp"
+            android:layout_gravity="center_horizontal" />
+    </FrameLayout>
+</LinearLayout>
