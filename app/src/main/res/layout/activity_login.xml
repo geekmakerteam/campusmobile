@@ -54,10 +54,17 @@
             android:layout_width="70dp"
             android:layout_height="48dp"
             android:layout_below="@id/password_edit"
-            android:layout_alignRight="@id/password_edit"
+            android:layout_marginLeft="70dp"
             android:text="@string/login"/>
-    </RelativeLayout>
 
+        <Button
+            android:id="@+id/reset_btn"
+            android:layout_width="70dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/password_edit"
+            android:layout_marginLeft="150dp"
+            android:text="@string/reset"/>
+    </RelativeLayout>
 
 
 

@@ -92,7 +92,7 @@ public class ClassNewsFragment extends Fragment implements AdapterView.OnItemCli
             @Override
             public void onSuccess(int statusCode, String content) {
                 super.onSuccess(statusCode, content);
-
+	            Log.i(tag,content);
                 List<ClassNews> classNewses = FastJSONUtil.getObjects(content, ClassNews.class);
                 Log.i(tag,"一共拉取了" + classNewses.size()+"条数据");
 

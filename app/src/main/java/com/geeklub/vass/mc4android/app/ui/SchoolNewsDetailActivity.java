@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import com.geeklub.vass.mc4android.app.R;
 import com.geeklub.vass.mc4android.app.beans.schoolnews.EachNews;
+import com.umeng.analytics.MobclickAgent;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
@@ -70,4 +72,15 @@ public class SchoolNewsDetailActivity extends ActionBarActivity {
         return true;
     }
 
+	@Override
+	protected void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
+	}
 }

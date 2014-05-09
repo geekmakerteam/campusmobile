@@ -1,12 +1,25 @@
 package com.geeklub.vass.mc4android.app.fragment;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v4.app.Fragment;
+import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import com.geeklub.vass.mc4android.app.R;
 import com.geeklub.vass.mc4android.app.adapter.SchoolNewsAdapter;
@@ -66,10 +79,11 @@ public class SchoolNewsFragment extends Fragment implements AdapterView.OnItemCl
         View view = inflater.inflate(R.layout.fragment_school_news, null);
         ButterKnife.inject(this, view);
 
-        mListView.setOnItemClickListener(this);
+	    mListView.setOnItemClickListener(this);
 
-        animationAdapter.setAbsListView(mListView);
-        mListView.setAdapter(animationAdapter);
+	    animationAdapter.setAbsListView(mListView);
+	    mListView.setAdapter(animationAdapter);
+
         return view;
     }
 
@@ -82,7 +96,8 @@ public class SchoolNewsFragment extends Fragment implements AdapterView.OnItemCl
         }
     }
 
-    private void loadData() {
+
+	private void loadData() {
         MCRestClient.get(API.SCHOOL_NEWS, null, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, String content) {
@@ -91,15 +106,13 @@ public class SchoolNewsFragment extends Fragment implements AdapterView.OnItemCl
                 List<EachNews> allnews = FastJSONUtil.getObjects(content, EachNews.class);
                 mList.addAll(allnews);
                 mAdapter.notifyDataSetChanged();
-
             }
         }, MCApplication.getApplication());
-
     }
 
     @Override
     public void onAttach(Activity activity) {
-        super.onAttach(activity);
+	    super.onAttach(activity);
         try {
             ((MainActivity) getActivity()).onSectionAttached(R.string.school_news);
 
@@ -111,13 +124,23 @@ public class SchoolNewsFragment extends Fragment implements AdapterView.OnItemCl
         }
     }
 
-    @Override
+	@Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
 
-    @Override
+	@Override
+	public void onResume() {
+		super.onResume();
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+	}
+
+	@Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if (mListener != null) {
             mListener.onFragmentInteraction((EachNews) parent.getItemAtPosition(position));
@@ -128,5 +151,4 @@ public class SchoolNewsFragment extends Fragment implements AdapterView.OnItemCl
     public interface OnFragmentInteractionListener {
         public void onFragmentInteraction(EachNews eachNews);
     }
-
 }

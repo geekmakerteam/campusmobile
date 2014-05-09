@@ -10,6 +10,7 @@ import com.geeklub.vass.mc4android.app.R;
 import com.geeklub.vass.mc4android.app.beans.courses.Courses;
 import com.geeklub.vass.mc4android.app.fragment.teacher.CallNamesFragment;
 import com.geeklub.vass.mc4android.app.fragment.teacher.LoginWebFragment;
+import com.umeng.analytics.MobclickAgent;
 import butterknife.ButterKnife;
 
 public class CallNamesActivity extends ActionBarActivity implements ActionBar.TabListener{
@@ -44,8 +45,6 @@ public class CallNamesActivity extends ActionBarActivity implements ActionBar.Ta
                         .setText("扫一扫")
                         .setTabListener(this)
         );
-
-
 
     }
 
@@ -99,5 +98,16 @@ public class CallNamesActivity extends ActionBarActivity implements ActionBar.Ta
     }
 
 
+	@Override
+	protected void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
+	}
 
 }

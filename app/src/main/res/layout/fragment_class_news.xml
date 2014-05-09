@@ -5,8 +5,8 @@
     android:id="@+id/grid_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:column_count="2"
-    app:item_margin="12dp" />
+    
+ />
 
     <!--</LinearLayout>-->
 

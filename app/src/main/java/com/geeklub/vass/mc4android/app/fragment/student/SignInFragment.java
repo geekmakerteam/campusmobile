@@ -26,7 +26,7 @@ public class SignInFragment extends BarCodeScannerFragment implements BarCodeSca
 
         fragment.setArguments(args);
         return fragment;
-    }
+       }
     public SignInFragment() {
 
     }

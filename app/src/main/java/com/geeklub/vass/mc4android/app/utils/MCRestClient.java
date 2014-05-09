@@ -16,6 +16,7 @@ public class MCRestClient {
     private static final String BASE_URL = "http://mcampus001.duapp.com/";
 
 
+
     private static AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
 
 
@@ -25,7 +26,7 @@ public class MCRestClient {
 
 
 
-    public static void get(String url, RequestParams params, AsyncHttpResponseHandler responseHandler,Context context) {
+	public static void get(String url, RequestParams params, AsyncHttpResponseHandler responseHandler,Context context) {
         PersistentCookieStore cookieStore = new PersistentCookieStore(context);
         asyncHttpClient.setCookieStore(cookieStore);
         asyncHttpClient.get(getAbsoluteUrl(url), params, responseHandler);
@@ -43,9 +44,4 @@ public class MCRestClient {
         asyncHttpClient.setCookieStore(cookieStore);
         asyncHttpClient.post(url, params, responseHandler);
     }
-
-
-
-
-
 }

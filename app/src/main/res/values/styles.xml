@@ -5,6 +5,8 @@
         <!-- Customize your theme here. -->
     </style>
 
+
+
 <!--自定义的title指示器-->
     <style name="CustomTitlePageIndicator">
         <item name="android:background">#18FF0000</item>
@@ -27,11 +29,17 @@
     <style name="MyActionBar" parent="@style/Widget.AppCompat.ActionBar">
         <item name="android:background">@color/POMEGRANATE</item>
     </style>
+
+    <style name="Anim_style2" parent="android:Theme.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
 <!---->
-
-
-
-
 
 
 

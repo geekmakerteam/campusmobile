@@ -143,15 +143,43 @@ public class NavigationDrawerFragment extends Fragment {
             mList.add(new DrawerMenuItem(R.string.class_news,R.drawable.class_news_icon_src));
             mList.add(new DrawerMenuItem(R.string.time_table,R.drawable.time_table_icon_src));
             mList.add(new DrawerMenuItem(R.string.sign_in,R.drawable.sign_in_icon_src));
+	        mList.add(new DrawerMenuItem(R.string.campus_weixing,R.drawable.call_names_icon_src));
+	        mList.add(new DrawerMenuItem(R.string.exit,R.drawable.call_names_icon_src));
 
-            mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
+	        mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
         }
 
-        if (datas.contains("teacher")) {
-            mList.add(new DrawerMenuItem(R.string.school_news,R.drawable.school_news_icon_src));
-            mList.add(new DrawerMenuItem(R.string.call_names,R.drawable.call_names_icon_src));
 
-            mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
+        if (datas.contains("teacher")) {
+
+	      //  mList.add(new DrawerMenuItem(R.string.class_news,   R.drawable.class_news_icon_src));
+	      //  mList.add(new DrawerMenuItem(R.string.time_table,R.drawable.time_table_icon_src));
+	        if(datas.contains("classleader"))
+	        {
+
+		        mList.add(new DrawerMenuItem(R.string.school_news,R.drawable.school_news_icon_src));
+
+		        mList.add(new DrawerMenuItem(R.string.class_news,R.drawable.class_news_icon_src));
+
+		        mList.add(new DrawerMenuItem(R.string.call_names,R.drawable.call_names_icon_src));
+
+		        mList.add(new DrawerMenuItem(R.string.campus_weixing,R.drawable.call_names_icon_src));
+		        mList.add(new DrawerMenuItem(R.string.exit,R.drawable.call_names_icon_src));
+
+		        mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
+	        }
+	        else
+	        {
+		        mList.add(new DrawerMenuItem(R.string.school_news,R.drawable.school_news_icon_src));
+
+		        mList.add(new DrawerMenuItem(R.string.call_names,R.drawable.call_names_icon_src));
+
+		        mList.add(new DrawerMenuItem(R.string.campus_weixing,R.drawable.call_names_icon_src));
+		        mList.add(new DrawerMenuItem(R.string.exit,R.drawable.call_names_icon_src));
+
+		        mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
+	        }
+
         }
 
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);

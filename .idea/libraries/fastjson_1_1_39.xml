@@ -4,8 +4,6 @@
       <root url="jar://$PROJECT_DIR$/app/libs/fastjson-1.1.39.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.ideaLibSources/fastjson-1.1.39-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
