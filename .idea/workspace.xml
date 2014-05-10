@@ -62,8 +62,8 @@
       <file leaf-file-name="HomeworkFileDetailActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkFileDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.58483756" vertical-offset="1728" max-vertical-offset="3276">
-              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38989168" vertical-offset="1728" max-vertical-offset="3276">
+              <caret line="140" column="44" selection-start-line="140" selection-start-column="44" selection-end-line="140" selection-end-column="44" />
               <folding>
                 <element signature="e#2220#2221#0" expanded="true" />
                 <element signature="e#2242#2243#0" expanded="true" />
@@ -2064,7 +2064,11 @@
       <created>1399712326925</created>
       <updated>1399712326925</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="V1.4版本&#10;作业管理界面搞好">
+      <created>1399712366609</created>
+      <updated>1399712366609</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2611,8 +2615,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkFileDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58483756" vertical-offset="1728" max-vertical-offset="3276">
-          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.38989168" vertical-offset="1728" max-vertical-offset="3276">
+          <caret line="140" column="44" selection-start-line="140" selection-start-column="44" selection-end-line="140" selection-end-column="44" />
           <folding>
             <element signature="e#2220#2221#0" expanded="true" />
             <element signature="e#2242#2243#0" expanded="true" />
