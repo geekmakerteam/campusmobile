@@ -28,6 +28,7 @@ import com.geeklub.vass.mc4android.app.adapter.HomeworkFileAdapter;
 import com.geeklub.vass.mc4android.app.adapter.SchoolNewsAdapter;
 import com.geeklub.vass.mc4android.app.beans.UserPassword;
 import com.geeklub.vass.mc4android.app.utils.FileUtil;
+import com.geeklub.vass.mc4android.app.utils.FilterUtil;
 import com.geeklub.vass.mc4android.app.utils.SharedPreferencesUtils;
 import com.umeng.analytics.MobclickAgent;
 
@@ -72,6 +73,10 @@ public class HomeworkFileActivity extends Activity implements OnClickListener{
 
 		mBackBtn.setOnClickListener(this);
 		fileButton.setOnClickListener(this);
+		String a = getIntent().getStringExtra("object");
+		Log.i("---baidu----",a);
+		oj=a;
+		FileUtil.object=a;
 
 		loadData();
 
@@ -81,14 +86,13 @@ public class HomeworkFileActivity extends Activity implements OnClickListener{
 
 		mAdapter.notifyDataSetChanged();
 
-
 		mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                    ObjectSummary objectSum=mList.get(i);
 				Intent intent=new Intent(HomeworkFileActivity.this,HomeworkFileDetailActivity.class);
 				intent.putExtra("filename",objectSum.getName());
-				intent.putExtra("filesize",objectSum.getSize());
+				intent.putExtra("filesize", FilterUtil.sizeConver(objectSum.getSize()));
 				startActivity(intent);
 			}
 		});
@@ -102,13 +106,10 @@ public class HomeworkFileActivity extends Activity implements OnClickListener{
 
 	private void loadData() {
 
-		String a = getIntent().getStringExtra("object");
-        Log.i("---baidu----",a);
-        oj=a;
 		BCSCredentials credentials = new BCSCredentials(FileUtil.accessKey, FileUtil.secretKey);
 		BaiduBCS baiduBCS = new BaiduBCS(credentials, FileUtil.host);
 		baiduBCS.setDefaultEncoding("UTF-8"); // Default UTF-8
-		FileUtil.object=a;
+
 		try {
 			mList=FileUtil.listObject(baiduBCS);
 
@@ -117,6 +118,8 @@ public class HomeworkFileActivity extends Activity implements OnClickListener{
 		} catch (BCSClientException e) {
 			e.printStackTrace();
 		}
+
+
 	}
 
 	@Override
@@ -165,6 +168,9 @@ public class HomeworkFileActivity extends Activity implements OnClickListener{
 			baiduBCS.setDefaultEncoding("UTF-8"); // Default UTF-8
 			FileUtil.object=oj;
 			FileUtil.putObjectByFile(baiduBCS,uri.getPath(),userPassword.getUserName());
+			Toast.makeText(HomeworkFileActivity.this,"作业发布成功！",Toast.LENGTH_SHORT).show();
+			//loadData();
+            mAdapter.notifyDataSetChanged();
 		}
 		super.onActivityResult(requestCode, resultCode, data);
 	}

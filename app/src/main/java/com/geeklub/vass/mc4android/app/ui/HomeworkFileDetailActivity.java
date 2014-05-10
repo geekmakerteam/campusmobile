@@ -25,9 +25,11 @@ import com.geeklub.vass.mc4android.app.R;
 import com.geeklub.vass.mc4android.app.adapter.HomeworkFileAdapter;
 import com.geeklub.vass.mc4android.app.beans.UserPassword;
 import com.geeklub.vass.mc4android.app.utils.FileUtil;
+import com.geeklub.vass.mc4android.app.utils.FilterUtil;
 import com.geeklub.vass.mc4android.app.utils.SharedPreferencesUtils;
 import com.umeng.analytics.MobclickAgent;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,7 +72,6 @@ public class HomeworkFileDetailActivity extends Activity implements OnClickListe
 	private WebView webview;
 
 
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -81,6 +82,8 @@ public class HomeworkFileDetailActivity extends Activity implements OnClickListe
 		remarkButton.setOnClickListener(this);
 		downloadButton.setOnClickListener(this);
         fileonline.setOnClickListener(this);
+
+
 
 		loadData();
 	}
@@ -102,20 +105,19 @@ public class HomeworkFileDetailActivity extends Activity implements OnClickListe
 
 		String filesize = getIntent().getStringExtra("filesize");
 
-		userTitle.setText(filename);
+		userTitle.setText("");
 		fileName.setText(filename);
 		size.setText(filesize);
 
 		BCSCredentials credentials = new BCSCredentials(FileUtil.accessKey, FileUtil.secretKey);
 		BaiduBCS baiduBCS = new BaiduBCS(credentials, FileUtil.host);
 		baiduBCS.setDefaultEncoding("UTF-8"); // Default UTF-8
-		FileUtil.object=a;
 		try
 		{
-			Policy policy=getObjectPolicy(baiduBCS);
-			String username=policy.getStatements().get(0).getUser().get(0);
+			Policy policy=FileUtil.getObjectPolicy(baiduBCS);
+			String username=policy.getStatements().get(0).getUser().get(1);
 
-			fileauthor.setText(username);
+			fileauthor.setText("上传者:"+username.substring(4));
 			webviewUrl=FileUtil.generateUrl(baiduBCS);
 
 		} catch (BCSServiceException e) {
@@ -129,39 +131,53 @@ public class HomeworkFileDetailActivity extends Activity implements OnClickListe
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch(v.getId()) {
-			case R.id.file_reback_btn:
+			case R.id.reback_btn:
 				finish();
 				break;
 			case R.id.fileonline:
-				//实例化WebView对象
+				/*//实例化WebView对象
 				webview = new WebView(this);
 				//设置WebView属性，能够执行Javascript脚本
 				webview.getSettings().setJavaScriptEnabled(true);
 				//加载需要显示的网页
-				webview.loadUrl(webviewUrl);
-				//设置Web视图
-				setContentView(webview);
+				webview.loadUrl(FileUtil.weburl+webviewUrl);
 
+				Log.e("-------webURL-------",FileUtil.weburl+webviewUrl);
+				Log.e("-------webURL-------",FileUtil.weburl+webviewUrl);
+				Log.e("-------webURL-------",FileUtil.weburl+webviewUrl);
+				Log.e("-------webURL-------",FileUtil.weburl+webviewUrl);
+				Log.e("-------webURL-------",FileUtil.weburl+webviewUrl);
+				//设置Web视图
+				setContentView(webview);*/
+				Intent intent=new Intent(HomeworkFileDetailActivity.this,WebViewActivity.class);
+				intent.putExtra("urladdress",FileUtil.weburl+webviewUrl);
+				startActivity(intent);
 				break;
 			case R.id.button:
+				BCSCredentials credentials = new BCSCredentials(FileUtil.accessKey, FileUtil.secretKey);
+				BaiduBCS baiduBCS = new BaiduBCS(credentials, FileUtil.host);
+				// baiduBCS.setDefaultEncoding("GBK");
+				baiduBCS.setDefaultEncoding("UTF-8"); // Default UTF-8
+				try {
+					FileUtil.getObjectWithDestFile(baiduBCS,fileName.getText().toString());
+				    Toast.makeText(HomeworkFileDetailActivity.this,"文件保存在/storage/sdcard0/campusmobile目录下",Toast.LENGTH_SHORT).show();
 
+				} catch (BCSServiceException e) {
+					Log.w("-----baidu-----","Bcs return:" + e.getBcsErrorCode() + ", " + e.getBcsErrorMessage() + ", RequestId=" + e.getRequestId());
+				    Toast.makeText(HomeworkFileDetailActivity.this,"内部错误,请妳反馈给我!",Toast.LENGTH_SHORT).show();
+				} catch (BCSClientException e) {
+					e.printStackTrace();
+					Toast.makeText(HomeworkFileDetailActivity.this,"内部错误,请妳反馈给我!",Toast.LENGTH_SHORT).show();
+				}
 
+			case R.id.right_btn:
+
+				break;
 			default:
 				break;
 		}
 	}
 
-
-	@Override
-	//设置回退
-	//覆盖Activity类的onKeyDown(int keyCoder,KeyEvent event)方法
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		if ((keyCode == KeyEvent.KEYCODE_BACK) && webview.canGoBack()) {
-			webview.goBack(); //goBack()表示返回WebView的上一页面
-			return true;
-		}
-		return false;
-	}
 
 
 	@Override

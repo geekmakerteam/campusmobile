@@ -209,8 +209,8 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
 
 	    if (userPassword != null) {
-		    etUserName.setText(userPassword.getUserName());
-		    etPassword.setText(userPassword.getPassword());
+		    et_userName.setText(userPassword.getUserName());
+		    et_passWord.setText(userPassword.getPassword());
 	    }
 
 

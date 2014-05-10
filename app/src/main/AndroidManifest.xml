@@ -96,6 +96,8 @@
         <activity android:name="com.umeng.fb.ContactActivity"/>
         <activity android:name=".ui.HomeworkActivity"/>
         <activity android:name=".ui.HomeworkFileActivity"/>
+        <activity android:name=".ui.HomeworkFileDetailActivity"/>
+        <activity android:name=".ui.WebViewActivity"/>
 
         <service
             android:name="com.umeng.common.net.DownloadingService"

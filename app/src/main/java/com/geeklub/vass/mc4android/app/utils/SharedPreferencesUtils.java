@@ -7,6 +7,7 @@ import android.content.SharedPreferences.Editor;
 
 import com.geeklub.vass.mc4android.app.beans.UserPassword;
 
+
 public class SharedPreferencesUtils{
 	public static UserPassword readSharedPreferences(Context context) {
 		String strName, strPassword;
