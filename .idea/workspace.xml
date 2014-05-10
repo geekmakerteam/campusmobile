@@ -2068,7 +2068,11 @@
       <created>1399712366609</created>
       <updated>1399712366609</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="V1.4版本&#10;作业管理界面搞好">
+      <created>1399712437683</created>
+      <updated>1399712437683</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
