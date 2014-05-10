@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -54,6 +55,7 @@ public class HomeworkActivity extends Activity implements OnClickListener{
 			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 				String groupName = data.get(i);
 				Intent intent=new Intent(HomeworkActivity.this,HomeworkFileActivity.class);
+				Log.i("-----groupName----",groupName);
 				intent.putExtra("object", groupName);
 				startActivity(intent);
 			}

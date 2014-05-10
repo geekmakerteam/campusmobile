@@ -42,7 +42,7 @@ import com.geeklub.vass.mc4android.app.fragment.teacher.TodayCoursesFragment;
 import com.geeklub.vass.mc4android.app.ui.teacher.CallNamesActivity;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.fb.FeedbackAgent;
-
+import android.os.StrictMode;
 
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks,
@@ -74,6 +74,11 @@ public class MainActivity extends ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+		if (android.os.Build.VERSION.SDK_INT > 9) {
+			StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+			StrictMode.setThreadPolicy(policy);
+		}
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);

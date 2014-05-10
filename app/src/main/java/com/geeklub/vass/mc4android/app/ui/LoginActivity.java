@@ -23,11 +23,13 @@ import com.appkefu.lib.service.KFSettingsManager;
 import com.appkefu.lib.service.KFXmppManager;
 import com.appkefu.lib.utils.KFSLog;
 import com.geeklub.vass.mc4android.app.R;
+import com.geeklub.vass.mc4android.app.beans.UserPassword;
 import com.geeklub.vass.mc4android.app.common.API;
 import com.geeklub.vass.mc4android.app.common.APIParams;
 import com.geeklub.vass.mc4android.app.utils.LoginUtil;
 import com.geeklub.vass.mc4android.app.utils.MCApplication;
 import com.geeklub.vass.mc4android.app.utils.MCRestClient;
+import com.geeklub.vass.mc4android.app.utils.SharedPreferencesUtils;
 import com.github.johnpersano.supertoasts.SuperActivityToast;
 import com.github.johnpersano.supertoasts.SuperCardToast;
 import com.github.johnpersano.supertoasts.SuperToast;
@@ -201,6 +203,17 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
 
     public void login() {
+
+	    UserPassword userPassword = SharedPreferencesUtils
+			    .readSharedPreferences(getApplicationContext());
+
+
+	    if (userPassword != null) {
+		    etUserName.setText(userPassword.getUserName());
+		    etPassword.setText(userPassword.getPassword());
+	    }
+
+
         userName = et_userName.getText().toString();
         passWord = et_passWord.getText().toString();
 
@@ -233,6 +246,8 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
                         showSuperToast();
                         LoginUtil.setUserName(MCApplication.getApplication(), userName);
+	                    SharedPreferencesUtils.writeSharedPreferences(
+			                    getApplicationContext(), userName, passWord);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                     }

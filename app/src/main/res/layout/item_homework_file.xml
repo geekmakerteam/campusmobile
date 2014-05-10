@@ -18,6 +18,20 @@
         android:layout_marginLeft="22dp"
         android:layout_marginTop="25dp" />
 
+    <!--<TextView
+        android:singleLine="false"
+        android:maxLines="2"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="上传者"
+        android:id="@+id/author"
+        android:layout_alignTop="@+id/title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp" />-->
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,11 +46,11 @@
     <TextView
         android:singleLine="false"
         android:maxLines="2"
-        android:layout_width="120dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="上传者"
-        android:id="@+id/author"
+        android:text="上传时间"
+        android:id="@+id/time"
         android:layout_alignTop="@+id/filesize"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"

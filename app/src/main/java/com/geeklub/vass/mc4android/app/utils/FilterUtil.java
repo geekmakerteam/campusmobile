@@ -45,7 +45,7 @@ public class FilterUtil {
 	public static String getTime(long time)
 	{
 	      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-	      String date = sdf.format(new Date(1399647108*1000L));
+	      String date = sdf.format(new Date(time*1000L));
 	      return date;
 	}
 
