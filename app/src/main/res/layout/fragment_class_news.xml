@@ -1,5 +1,26 @@
-<!--<LinearLayout--><!--android:background="@color/CLOUDS"--><!--android:layout_width="fill_parent"--><!--android:layout_height="fill_parent"--><!--xmlns:android="http://schemas.android.com/apk/res/android">-->
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                >
+    <RelativeLayout
+        android:id="@+id/file_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/appkefu_title_bar" >
+        <Button
+            android:id="@+id/publicBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="发布通知"
+            android:textColor="#fff"
+            android:background="@drawable/appkefu_title_btn_right"
+            />
+    </RelativeLayout>
 <com.etsy.android.grid.StaggeredGridView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/grid_view"
@@ -7,8 +28,7 @@
     android:layout_height="match_parent"
     
  />
-
-    <!--</LinearLayout>-->
+</LinearLayout>
 
 
 

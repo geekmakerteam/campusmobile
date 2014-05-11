@@ -112,7 +112,7 @@ public class HomeworkFileActivity extends Activity implements OnClickListener{
 
 		try {
 			mList=FileUtil.listObject(baiduBCS);
-
+//			mAdapter.notifyDataSetChanged();
 		} catch (BCSServiceException e) {
 			Log.w("===baidu==","Bcs return:" + e.getBcsErrorCode() + ", " + e.getBcsErrorMessage() + ", RequestId=" + e.getRequestId());
 		} catch (BCSClientException e) {
@@ -169,7 +169,7 @@ public class HomeworkFileActivity extends Activity implements OnClickListener{
 			FileUtil.object=oj;
 			FileUtil.putObjectByFile(baiduBCS,uri.getPath(),userPassword.getUserName());
 			Toast.makeText(HomeworkFileActivity.this,"作业发布成功！",Toast.LENGTH_SHORT).show();
-			//loadData();
+			loadData();
             mAdapter.notifyDataSetChanged();
 		}
 		super.onActivityResult(requestCode, resultCode, data);

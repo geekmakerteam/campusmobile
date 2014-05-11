@@ -143,8 +143,8 @@ public class NavigationDrawerFragment extends Fragment {
             mList.add(new DrawerMenuItem(R.string.class_news,R.drawable.class_news_icon_src));
             mList.add(new DrawerMenuItem(R.string.time_table,R.drawable.time_table_icon_src));
             mList.add(new DrawerMenuItem(R.string.sign_in,R.drawable.sign_in_icon_src));
-	        mList.add(new DrawerMenuItem(R.string.campus_weixing,R.drawable.call_names_icon_src));
-	        mList.add(new DrawerMenuItem(R.string.exit,R.drawable.call_names_icon_src));
+	        mList.add(new DrawerMenuItem(R.string.campus_weixing,R.drawable.weixing));
+	        mList.add(new DrawerMenuItem(R.string.exit,R.drawable.exit));
 
 	        mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
         }
@@ -161,10 +161,12 @@ public class NavigationDrawerFragment extends Fragment {
 
 		        mList.add(new DrawerMenuItem(R.string.class_news,R.drawable.class_news_icon_src));
 
+		       // mList.add(new DrawerMenuItem(R.string.release_notices,R.drawable.class_news_icon_src));
+
 		        mList.add(new DrawerMenuItem(R.string.call_names,R.drawable.call_names_icon_src));
 
-		        mList.add(new DrawerMenuItem(R.string.campus_weixing,R.drawable.call_names_icon_src));
-		        mList.add(new DrawerMenuItem(R.string.exit,R.drawable.call_names_icon_src));
+		        mList.add(new DrawerMenuItem(R.string.campus_weixing,R.drawable.weixing));
+		        mList.add(new DrawerMenuItem(R.string.exit,R.drawable.exit));
 
 		        mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
 	        }
@@ -175,7 +177,7 @@ public class NavigationDrawerFragment extends Fragment {
 		        mList.add(new DrawerMenuItem(R.string.call_names,R.drawable.call_names_icon_src));
 
 		        mList.add(new DrawerMenuItem(R.string.campus_weixing,R.drawable.call_names_icon_src));
-		        mList.add(new DrawerMenuItem(R.string.exit,R.drawable.call_names_icon_src));
+		        mList.add(new DrawerMenuItem(R.string.exit,R.drawable.exit));
 
 		        mDrawerListView.setAdapter(new DrawerMenuAdapter(mList,MCApplication.getApplication()));
 	        }

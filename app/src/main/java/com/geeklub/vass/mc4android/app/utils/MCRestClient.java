@@ -13,7 +13,7 @@ import com.loopj.android.http.RequestParams;
 public class MCRestClient {
 
 
-    private static final String BASE_URL = "http://mcampus001.duapp.com/";
+    public static final String BASE_URL = "http://mcampus001.duapp.com/";
 
 
 
@@ -33,8 +33,8 @@ public class MCRestClient {
     }
 
     public static void post(String url, RequestParams params, AsyncHttpResponseHandler responseHandler,Context context) {
-        PersistentCookieStore cookieStore = new PersistentCookieStore(context);
-        asyncHttpClient.setCookieStore(cookieStore);
+	    PersistentCookieStore cookieStore = new PersistentCookieStore(context);
+	    asyncHttpClient.setCookieStore(cookieStore);
         asyncHttpClient.post(getAbsoluteUrl(url), params, responseHandler);
     }
 

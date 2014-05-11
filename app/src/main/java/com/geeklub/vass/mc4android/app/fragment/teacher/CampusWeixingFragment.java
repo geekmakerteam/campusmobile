@@ -137,7 +137,6 @@ public class CampusWeixingFragment extends Fragment implements AdapterView.OnCli
 		intentFilter.addAction(KFMainService.ACTION_XMPP_PRESENCE_SUBSCRIBE);
 		//
 		getActivity().registerReceiver(mXmppreceiver, intentFilter);
-
 	}
 
 

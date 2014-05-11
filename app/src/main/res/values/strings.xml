@@ -51,13 +51,13 @@
         <item>关于</item>
     </string-array>
     <string name="app_name_feed">意见反馈</string>
-    <string name="feedback_contact_hint">联系方式:邮箱/QQ/手机号</string>
-    <string name="feedback_content_hint">请输入您的反馈意见</string>
+    <string name="feedback_contact_hint">标题</string>
+    <string name="feedback_content_hint">请输入通知内容</string>
     <string name="submit">提交</string>
     <string name="mock_record_first">扫描二维码有点问题</string>
     <string name="mock_record_second">突然间异常退出</string>
     <string name="feedback_record">反馈记录</string>
-    <string name="request_content">请输入反馈的意见</string>
+    <string name="request_content">请输入通知记录</string>
     <string name="waiting">正在处理，请稍等片刻…</string>
     <string name="feedback_success">发送成功</string>
     <string name="feedback_failed">发送失败</string>

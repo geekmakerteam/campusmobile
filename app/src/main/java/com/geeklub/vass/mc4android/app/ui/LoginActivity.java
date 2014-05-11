@@ -214,7 +214,6 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
     public void login() {
 
-
         userName = et_userName.getText().toString();
         passWord = et_passWord.getText().toString();
 

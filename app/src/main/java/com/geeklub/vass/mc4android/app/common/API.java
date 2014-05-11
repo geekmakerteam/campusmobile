@@ -6,6 +6,7 @@ package com.geeklub.vass.mc4android.app.common;
 public class API {
 
 
+	public final static String PUBIC="/api/classnews/publish";
     /**用户登录*/
     public final static String LOGIN = "/api/login";
     /**检查用户是否登录*/

@@ -102,6 +102,7 @@
         <activity android:name=".ui.ResourceFileActivity"/>
         <activity android:name=".ui.ResourceDetailActivity"/>
         <activity android:name=".ui.WebViewRerouceActivity"/>
+        <activity android:name=".feedback.FeedbackActivity"/>
 
         <service
             android:name="com.umeng.common.net.DownloadingService"

@@ -1,6 +1,7 @@
 package com.geeklub.vass.mc4android.app.fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -9,11 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.Button;
+
 import com.etsy.android.grid.StaggeredGridView;
 import com.geeklub.vass.mc4android.app.R;
 import com.geeklub.vass.mc4android.app.adapter.ClassNewsAdapter;
 import com.geeklub.vass.mc4android.app.beans.classnews.ClassNews;
 import com.geeklub.vass.mc4android.app.common.API;
+import com.geeklub.vass.mc4android.app.feedback.FeedbackActivity;
 import com.geeklub.vass.mc4android.app.ui.MainActivity;
 import com.geeklub.vass.mc4android.app.utils.FastJSONUtil;
 import com.geeklub.vass.mc4android.app.utils.MCApplication;
@@ -32,6 +36,8 @@ public class ClassNewsFragment extends Fragment implements AdapterView.OnItemCli
 
     @InjectView(R.id.grid_view)
     StaggeredGridView mGridView;
+	@InjectView(R.id.publicBtn)
+	Button publicBtn;
 
     private OnFragmentInteractionListener mListener;
     private List<ClassNews>  mList = new ArrayList<ClassNews>();
@@ -74,6 +80,13 @@ public class ClassNewsFragment extends Fragment implements AdapterView.OnItemCli
 //        mGridView.setAdapter(mAdapter);
         mGridView.setOnItemClickListener(this);
         mGridView.setOnScrollListener(this);
+	    publicBtn.setOnClickListener(new View.OnClickListener() {
+		    @Override
+		    public void onClick(View view) {
+			    Intent intent=new Intent(getActivity(), FeedbackActivity.class);
+			    startActivity(intent);
+		    }
+	    });
 
         return view;
     }

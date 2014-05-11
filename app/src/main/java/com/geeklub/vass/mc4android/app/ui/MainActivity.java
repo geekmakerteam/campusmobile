@@ -30,7 +30,6 @@ import com.geeklub.vass.mc4android.app.beans.classnews.ClassNews;
 import com.geeklub.vass.mc4android.app.beans.courses.Courses;
 import com.geeklub.vass.mc4android.app.beans.schoolnews.EachNews;
 import com.geeklub.vass.mc4android.app.fragment.ClassNewsFragment;
-import com.geeklub.vass.mc4android.app.fragment.FeedbackFragment;
 import com.geeklub.vass.mc4android.app.fragment.SchoolNewsFragment;
 import com.geeklub.vass.mc4android.app.fragment.SettingFragment;
 import com.geeklub.vass.mc4android.app.fragment.ShareFragment;
@@ -125,7 +124,7 @@ public class MainActivity extends ActionBarActivity
 			    }
 			    if(listNames[i].equals("反馈"))
 			    {
-				    transaction.replace(R.id.container, FeedbackFragment.newInstance());
+			//	    transaction.replace(R.id.container, FeedbackFragment.newInstance());
 			    }
 			    if(listNames[i].equals("关于"))
 			    {
@@ -210,7 +209,7 @@ public class MainActivity extends ActionBarActivity
         }
 
         if (name.equals("发布通知")) {
-
+           // fragmentTransaction.replace(R.id.container,);
         }
 //        if (name.equals("点名")) {
 //            fragmentTransaction.replace(R.id.container,TodayCoursesFragment.newInstance());
