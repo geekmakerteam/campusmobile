@@ -28,16 +28,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f963ad22-f8af-475c-bce3-218a2fbcb3dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkRemarkActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/beans/RemarkScore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_remark.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/common/API.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/common/API.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/fragment/ClassNewsFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/fragment/ClassNewsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkFileActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkFileActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkFileDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkFileDetailActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_homeworkfile_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_homeworkfile_detail.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="campusmobile.iws" />
@@ -60,32 +51,7 @@
     <favorites_list name="campusmobile" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="API.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/common/API.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="666">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeworkFileDetailActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkFileDetailActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57014924" vertical-offset="5929" max-vertical-offset="7092">
-              <caret line="340" column="20" selection-start-line="340" selection-start-column="20" selection-end-line="340" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6754#6755#0" expanded="true" />
-                <element signature="e#6776#6777#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -1421,12 +1387,12 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_remark.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_homeworkfile_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkRemarkActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/common/API.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/beans/RemarkScore.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkFileActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkFileDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_homeworkfile_detail.xml" />
       </list>
     </option>
   </component>
@@ -1467,6 +1433,30 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="campusmobile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="campusmobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="campusmobile" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="campusmobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="campusmobile" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1668,16 +1658,21 @@
       <created>1399822710326</created>
       <updated>1399822710326</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="+作业评分">
+      <created>1399836769766</created>
+      <updated>1399836769766</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25872535" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1687,19 +1682,18 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32864675" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2713568" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36683416" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2964824" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32663316" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25872535" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1721,7 +1715,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="发布通知bug解决" />
-    <option name="LAST_COMMIT_MESSAGE" value="发布通知bug解决" />
+    <MESSAGE value="+作业评分" />
+    <option name="LAST_COMMIT_MESSAGE" value="+作业评分" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1752,6 +1747,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41142857" vertical-offset="0" max-vertical-offset="1368">
           <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1762,6 +1758,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30857143" vertical-offset="0" max-vertical-offset="4464">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1772,6 +1769,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31047618" vertical-offset="125" max-vertical-offset="738">
           <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1782,6 +1780,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.61714286" vertical-offset="0" max-vertical-offset="1152">
           <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1792,6 +1791,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51428574" vertical-offset="0" max-vertical-offset="1332">
           <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1802,6 +1802,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5485714" vertical-offset="0" max-vertical-offset="1368">
           <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1812,6 +1813,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51428574" vertical-offset="0" max-vertical-offset="1152">
           <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1822,6 +1824,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5485714" vertical-offset="0" max-vertical-offset="525">
           <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1832,6 +1835,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4457143" vertical-offset="0" max-vertical-offset="1404">
           <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1842,6 +1846,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="4590">
           <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1852,6 +1857,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="4338">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1862,6 +1868,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34285715" vertical-offset="0" max-vertical-offset="525">
           <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1872,6 +1879,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4457143" vertical-offset="0" max-vertical-offset="1404">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1882,6 +1890,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48" vertical-offset="0" max-vertical-offset="1188">
           <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1892,6 +1901,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30111524" vertical-offset="0" max-vertical-offset="538">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1902,6 +1912,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51428574" vertical-offset="216" max-vertical-offset="1368">
           <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1912,6 +1923,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5485714" vertical-offset="0" max-vertical-offset="1278">
           <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1922,6 +1934,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6419048" vertical-offset="1247" max-vertical-offset="2826">
           <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1932,6 +1945,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4457143" vertical-offset="0" max-vertical-offset="1350">
           <caret line="13" column="33" selection-start-line="9" selection-start-column="4" selection-end-line="13" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1942,6 +1956,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.76" vertical-offset="717" max-vertical-offset="1242">
           <caret line="62" column="21" selection-start-line="45" selection-start-column="4" selection-end-line="62" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1959,6 +1974,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.7545127" vertical-offset="1188" max-vertical-offset="2322">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1966,6 +1982,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.1444044" vertical-offset="1350" max-vertical-offset="2376">
           <caret line="32" column="57" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1988,16 +2005,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="725" max-vertical-offset="1314">
           <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_homeworkfile_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5733333" vertical-offset="2021" max-vertical-offset="3078">
-          <caret line="129" column="30" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -2008,6 +2016,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63544303" vertical-offset="919" max-vertical-offset="1314">
           <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2015,6 +2024,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.015873017" vertical-offset="855" max-vertical-offset="2988">
           <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1960#2060#0" expanded="true" />
+            <element signature="e#2055#2056#0" expanded="true" />
+            <element signature="e#2207#2701#0" expanded="true" />
+            <element signature="e#2696#2697#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2022,6 +2038,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22743683" vertical-offset="2052" max-vertical-offset="2880">
           <caret line="156" column="5" selection-start-line="152" selection-start-column="0" selection-end-line="156" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2029,6 +2046,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2160" max-vertical-offset="3780">
           <caret line="170" column="38" selection-start-line="170" selection-start-column="38" selection-end-line="170" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2036,6 +2054,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.4041452" vertical-offset="3070" max-vertical-offset="5184">
           <caret line="315" column="17" selection-start-line="315" selection-start-column="17" selection-end-line="315" selection-end-column="17" />
+          <folding>
+            <element signature="e#2935#3794#0" expanded="true" />
+            <element signature="e#3786#3787#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2057,6 +2079,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.39896372" vertical-offset="460" max-vertical-offset="846">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2099,6 +2122,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="27" max-vertical-offset="504">
           <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="e#194#195#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2106,6 +2132,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="282" max-vertical-offset="1998">
           <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2113,6 +2140,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.62985075" vertical-offset="419" max-vertical-offset="3420">
           <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+          <folding>
+            <element signature="e#2659#3107#0" expanded="true" />
+            <element signature="e#3102#3103#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2123,21 +2154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/common/API.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="666">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/widget/TextView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3313433" vertical-offset="4191" max-vertical-offset="9504">
-          <caret line="240" column="22" selection-start-line="240" selection-start-column="22" selection-end-line="240" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/java/lang/Runnable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25862068" vertical-offset="0" max-vertical-offset="348">
@@ -2145,15 +2161,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-19/android.jar!/android/widget/TextView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28647214" vertical-offset="0" max-vertical-offset="9504">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_homeworkfile_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5714286" vertical-offset="2040" max-vertical-offset="3078">
+          <caret line="130" column="46" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/ui/HomeworkFileDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57014924" vertical-offset="5929" max-vertical-offset="7092">
-          <caret line="340" column="20" selection-start-line="340" selection-start-column="20" selection-end-line="340" selection-end-column="20" />
+        <state vertical-scroll-proportion="-1.4314079" vertical-offset="2503" max-vertical-offset="7092">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6754#6755#0" expanded="true" />
             <element signature="e#6776#6777#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/geeklub/vass/mc4android/app/common/API.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18461539" vertical-offset="0" max-vertical-offset="666">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
