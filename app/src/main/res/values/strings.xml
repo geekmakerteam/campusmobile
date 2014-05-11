@@ -61,4 +61,7 @@
     <string name="waiting">正在处理，请稍等片刻…</string>
     <string name="feedback_success">发送成功</string>
     <string name="feedback_failed">发送失败</string>
+
+    <string name="remark_success">评分成功</string>
+    <string name="remark_failed">评分失败</string>
 </resources>

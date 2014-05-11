@@ -6,6 +6,10 @@ package com.geeklub.vass.mc4android.app.common;
 public class API {
 
 
+	public final static String GETREMARK="/api/homework/remark/score";
+
+	public final static String REMARK="/api/homework/remark";
+
 	public final static String PUBIC="/api/classnews/publish";
     /**用户登录*/
     public final static String LOGIN = "/api/login";

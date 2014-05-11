@@ -3,6 +3,7 @@ package com.geeklub.vass.mc4android.app.fragment;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -43,6 +44,21 @@ public class ClassNewsFragment extends Fragment implements AdapterView.OnItemCli
     private List<ClassNews>  mList = new ArrayList<ClassNews>();
     private ClassNewsAdapter mAdapter;
     private AnimationAdapter animationAdapter;
+	private Handler handler = new Handler();
+	private List<ClassNews> classNewses=null;
+	private Runnable runnable=new Runnable() {
+		@Override
+		public void run() {
+			this.update();
+			handler.postDelayed(this, 1000 * 1);// 间隔120秒
+		}
+		void update() {
+			//刷新msg的内容
+			Log.i("sqqqqq","----------------");
+			classNewses.clear();
+			loadData(mPageNum);
+		}
+	};
 
     private int     mPageNum = 1;
     private boolean mHasRequestedMore = false;
@@ -87,7 +103,7 @@ public class ClassNewsFragment extends Fragment implements AdapterView.OnItemCli
 			    startActivity(intent);
 		    }
 	    });
-
+	    handler.postDelayed(runnable, 1000 * 1);
         return view;
     }
 
@@ -106,7 +122,7 @@ public class ClassNewsFragment extends Fragment implements AdapterView.OnItemCli
             public void onSuccess(int statusCode, String content) {
                 super.onSuccess(statusCode, content);
 	            Log.i(tag,content);
-                List<ClassNews> classNewses = FastJSONUtil.getObjects(content, ClassNews.class);
+                classNewses = FastJSONUtil.getObjects(content, ClassNews.class);
                 Log.i(tag,"一共拉取了" + classNewses.size()+"条数据");
 
                 if (classNewses.isEmpty()){
@@ -134,7 +150,13 @@ public class ClassNewsFragment extends Fragment implements AdapterView.OnItemCli
         }
     }
 
-    @Override
+	@Override
+	public void onDestroy() {
+		handler.removeCallbacks(runnable); //停止刷新
+    	super.onDestroy();
+	}
+
+	@Override
     public void onDetach() {
         super.onDetach();
         mListener = null;

@@ -103,6 +103,7 @@
         <activity android:name=".ui.ResourceDetailActivity"/>
         <activity android:name=".ui.WebViewRerouceActivity"/>
         <activity android:name=".feedback.FeedbackActivity"/>
+        <activity android:name=".ui.HomeworkRemarkActivity"/>
 
         <service
             android:name="com.umeng.common.net.DownloadingService"
