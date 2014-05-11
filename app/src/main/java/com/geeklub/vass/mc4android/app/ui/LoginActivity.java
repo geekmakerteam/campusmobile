@@ -142,6 +142,16 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 	@Override
 	protected void onStart() {
 		super.onStart();
+
+		UserPassword userPassword = SharedPreferencesUtils
+				.readSharedPreferences(getApplicationContext());
+
+
+		if (userPassword != null) {
+			et_userName.setText(userPassword.getUserName());
+			et_passWord.setText(userPassword.getPassword());
+		}
+
 		KFSLog.d("onStart");
 
 		IntentFilter intentFilter = new IntentFilter();
@@ -203,15 +213,6 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
 
 
     public void login() {
-
-	    UserPassword userPassword = SharedPreferencesUtils
-			    .readSharedPreferences(getApplicationContext());
-
-
-	    if (userPassword != null) {
-		    et_userName.setText(userPassword.getUserName());
-		    et_passWord.setText(userPassword.getPassword());
-	    }
 
 
         userName = et_userName.getText().toString();

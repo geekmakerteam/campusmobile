@@ -98,6 +98,10 @@
         <activity android:name=".ui.HomeworkFileActivity"/>
         <activity android:name=".ui.HomeworkFileDetailActivity"/>
         <activity android:name=".ui.WebViewActivity"/>
+        <activity android:name=".ui.ResourceActivity"/>
+        <activity android:name=".ui.ResourceFileActivity"/>
+        <activity android:name=".ui.ResourceDetailActivity"/>
+        <activity android:name=".ui.WebViewRerouceActivity"/>
 
         <service
             android:name="com.umeng.common.net.DownloadingService"

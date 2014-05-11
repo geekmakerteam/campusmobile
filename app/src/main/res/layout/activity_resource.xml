@@ -30,7 +30,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:text="作业管理"
+            android:text="资源管理"
             />
 
         <Button
@@ -40,7 +40,7 @@
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:layout_marginRight="5dp"
-            android:text="作业上传"
+            android:text="上传资源"
             android:textColor="#fff"
             android:textSize="14sp"
             android:background="@drawable/appkefu_title_btn_right"

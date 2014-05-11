@@ -29,11 +29,11 @@ public class ClassNewsAdapter extends BaseAdapter {
         mData = data;
         mInflater = LayoutInflater.from(context);
 
-        mBackgroundColors.add(R.color.ALIZARIN);
-        mBackgroundColors.add(R.color.ORANGE);
-        mBackgroundColors.add(R.color.BELIZE_HOLE);
-        mBackgroundColors.add(R.color.CONCRETE);
-        mBackgroundColors.add(R.color.CARROT);
+        mBackgroundColors.add(R.color.one);
+        mBackgroundColors.add(R.color.two);
+        mBackgroundColors.add(R.color.three);
+        mBackgroundColors.add(R.color.four);
+        mBackgroundColors.add(R.color.five);
     }
 
     @Override

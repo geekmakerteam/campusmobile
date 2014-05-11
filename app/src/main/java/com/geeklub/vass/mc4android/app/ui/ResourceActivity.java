@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -53,14 +54,17 @@ public class ResourceActivity extends Activity implements OnClickListener{
 			@Override
 			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 				String groupName = data.get(i);
-				KFIMInterfaces.joinMUCRoom(ResourceActivity.this, groupName);
+				Intent intent=new Intent(ResourceActivity.this,ResourceFileActivity.class);
+				Log.i("-----groupName----", groupName);
+				intent.putExtra("object", groupName);
+				startActivity(intent);
 			}
 		});
 	}
 
 	private List<String> getData(){
 		data = new ArrayList<String>();
-        data.add("形势与政治");
+		data.add("形势与政治");
 		return data;
 	}
 

@@ -39,6 +39,7 @@ import com.geeklub.vass.mc4android.app.ui.LoginActivity;
 import com.geeklub.vass.mc4android.app.ui.MainActivity;
 import com.geeklub.vass.mc4android.app.ui.ProfileActivity;
 import com.geeklub.vass.mc4android.app.ui.ProfileFriendActivity;
+import com.geeklub.vass.mc4android.app.ui.ResourceActivity;
 import com.geeklub.vass.mc4android.app.ui.RosterListActivity;
 import com.geeklub.vass.mc4android.app.utils.FastJSONUtil;
 import com.geeklub.vass.mc4android.app.utils.MCApplication;
@@ -249,7 +250,7 @@ public class CampusWeixingFragment extends Fragment implements AdapterView.OnCli
 		textView8.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent intent = new Intent(getActivity(), GroupActivity.class);
+				Intent intent = new Intent(getActivity(), ResourceActivity.class);
 				startActivity(intent);
 			}
 		});

@@ -27,6 +27,13 @@
     <color name="gray">#ffc3c3c3</color>
     <color name="black">#ff000000</color>
 
+
+    <color name="one">#e2AA66CC</color>
+    <color name="two">#e299CC00</color>
+    <color name="three">#e2FFBB33</color>
+    <color name="four">#e2FF4444</color>
+    <color name="five">#e20099CC</color>
+
     <color name = "darkview">#FF33B5E5</color>
     <color name = "lightview">#e233B5E5</color>
     <color name="TRANSPARRENT_SILVER">#50bdc3c7</color>
