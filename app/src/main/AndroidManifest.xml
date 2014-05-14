@@ -59,13 +59,13 @@
             android:label="@string/title_activity_call_names" >
         </activity>
 
-        <activity android:name="com.geeklub.vass.mc4android.app.ui.RosterListActivity">
+        <activity android:name="com.geeklub.vass.mc4android.app.ui.RosterListActivity" android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
-        <activity android:name="com.geeklub.vass.mc4android.app.ui.AddFriendActivity" />
-        <activity android:name="com.geeklub.vass.mc4android.app.ui.HistoryActivity" />
-        <activity android:name=".ui.ChangePasswordActivity" />
-        <activity android:name=".ui.GroupActivity"/>
+        <activity android:name="com.geeklub.vass.mc4android.app.ui.AddFriendActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name="com.geeklub.vass.mc4android.app.ui.HistoryActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name=".ui.ChangePasswordActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name=".ui.GroupActivity" android:theme="@android:style/Theme.NoTitleBar"/>
 
         <activity android:name=".feedback.FeedbackRecordActivity"
                   android:theme="@android:style/Theme.NoTitleBar" />
@@ -74,36 +74,37 @@
         <!-- http://appkefu.com/AppKeFu/admin/ -->
         <meta-data
             android:name="com.appkefu.lib.appkey"
-            android:value="e9c8c311cd5af8680f86545bc5a3d12d" />
+            android:value="ce15946d92fbce763518ccb6af4625df" />
 
         <!-- 聊天窗口, 可通过修改layout文件appkefu_chat_activity.xml自定义窗口UI -->
-        <activity android:name="com.appkefu.lib.ui.activity.KFChatActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFChatActivity" android:theme="@android:style/Theme.NoTitleBar"/>
         <!-- 客服个人资料窗口 -->
-        <activity android:name="com.appkefu.lib.ui.activity.KFProfileActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFProfileActivity" android:theme="@android:style/Theme.NoTitleBar"/>
         <!-- 验证消息窗口，可通过修改layout文件appkefu_activity_subscribe_notification.xml自定义窗口UI -->
-        <activity android:name="com.appkefu.lib.ui.activity.KFSubscribeNotificationActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFSubscribeNotificationActivity" android:theme="@android:style/Theme.NoTitleBar"/>
         <!-- 选择图片 -->
         <activity
             android:name="com.appkefu.lib.ui.activity.KFSelectPicActivity"
             android:theme="@style/appkefu_dialog_style_bottom" />
-        <activity android:name="com.appkefu.lib.ui.activity.KFMUCChatActivity" />
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCChatActivity"
+                  android:theme="@android:style/Theme.NoTitleBar" />
         <activity android:name="com.appkefu.lib.ui.activity.KFMUCProfileActivity" />
-        <activity android:name="com.appkefu.lib.ui.activity.KFMUCInvitationNotificationActivity"/>
-        <activity android:name=".ui.ProfileActivity"/>
-        <activity android:name=".ui.ProfileChangeActivity"/>
-        <activity android:name=".ui.ProfileFriendActivity"/>
+        <activity android:name="com.appkefu.lib.ui.activity.KFMUCInvitationNotificationActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name=".ui.ProfileActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name=".ui.ProfileChangeActivity" android:theme="@android:style/Theme.NoTitleBar"/>
+        <activity android:name=".ui.ProfileFriendActivity" android:theme="@android:style/Theme.NoTitleBar"/>
         <activity android:name="com.umeng.fb.ConversationActivity"/>
         <activity android:name="com.umeng.fb.ContactActivity"/>
-        <activity android:name=".ui.HomeworkActivity"/>
+        <activity android:name=".ui.HomeworkActivity" />
         <activity android:name=".ui.HomeworkFileActivity"/>
-        <activity android:name=".ui.HomeworkFileDetailActivity"/>
+        <activity android:name=".ui.HomeworkFileDetailActivity" />
         <activity android:name=".ui.WebViewActivity"/>
-        <activity android:name=".ui.ResourceActivity"/>
+        <activity android:name=".ui.ResourceActivity" />
         <activity android:name=".ui.ResourceFileActivity"/>
-        <activity android:name=".ui.ResourceDetailActivity"/>
+        <activity android:name=".ui.ResourceDetailActivity" />
         <activity android:name=".ui.WebViewRerouceActivity"/>
-        <activity android:name=".feedback.FeedbackActivity"/>
-        <activity android:name=".ui.HomeworkRemarkActivity"/>
+        <activity android:name=".feedback.FeedbackActivity" />
+        <activity android:name=".ui.HomeworkRemarkActivity" android:theme="@android:style/Theme.NoTitleBar"/>
 
         <service
             android:name="com.umeng.common.net.DownloadingService"

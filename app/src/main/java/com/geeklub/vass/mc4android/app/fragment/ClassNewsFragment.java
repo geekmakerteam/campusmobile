@@ -16,6 +16,7 @@ import android.widget.Button;
 import com.etsy.android.grid.StaggeredGridView;
 import com.geeklub.vass.mc4android.app.R;
 import com.geeklub.vass.mc4android.app.adapter.ClassNewsAdapter;
+import com.geeklub.vass.mc4android.app.beans.UserPassword;
 import com.geeklub.vass.mc4android.app.beans.classnews.ClassNews;
 import com.geeklub.vass.mc4android.app.common.API;
 import com.geeklub.vass.mc4android.app.feedback.FeedbackActivity;
@@ -23,6 +24,7 @@ import com.geeklub.vass.mc4android.app.ui.MainActivity;
 import com.geeklub.vass.mc4android.app.utils.FastJSONUtil;
 import com.geeklub.vass.mc4android.app.utils.MCApplication;
 import com.geeklub.vass.mc4android.app.utils.MCRestClient;
+import com.geeklub.vass.mc4android.app.utils.SharedPreferencesUtils;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.nhaarman.listviewanimations.swinginadapters.AnimationAdapter;
 import com.nhaarman.listviewanimations.swinginadapters.prepared.SwingLeftInAnimationAdapter;
@@ -39,7 +41,6 @@ public class ClassNewsFragment extends Fragment implements AdapterView.OnItemCli
     StaggeredGridView mGridView;
 	@InjectView(R.id.publicBtn)
 	Button publicBtn;
-
     private OnFragmentInteractionListener mListener;
     private List<ClassNews>  mList = new ArrayList<ClassNews>();
     private ClassNewsAdapter mAdapter;
@@ -55,12 +56,11 @@ public class ClassNewsFragment extends Fragment implements AdapterView.OnItemCli
 		void update() {
 			//刷新msg的内容
 			Log.i("sqqqqq","----------------");
-			classNewses.clear();
 			loadData(mPageNum);
 		}
 	};
 
-    private int     mPageNum = 1;
+    private int mPageNum = 1;
     private boolean mHasRequestedMore = false;
 
     private String tag = "ClassNewsFragment";
@@ -94,16 +94,29 @@ public class ClassNewsFragment extends Fragment implements AdapterView.OnItemCli
         animationAdapter.setAbsListView(mGridView);
         mGridView.setAdapter(animationAdapter);
 //        mGridView.setAdapter(mAdapter);
+
+	    UserPassword userPassword=SharedPreferencesUtils.readSharedPreferences(getActivity());
+
+	    if(userPassword.getUserName().equals("xiaowang"))
+	    {
+               publicBtn.setVisibility(View.VISIBLE);
+		       publicBtn.setOnClickListener(new View.OnClickListener() {
+			    @Override
+			    public void onClick(View view) {
+				    Intent intent=new Intent(getActivity(), FeedbackActivity.class);
+				    startActivity(intent);
+			    }
+		    });
+	    }
+	    else
+	    {
+		    publicBtn.setVisibility(View.INVISIBLE);
+	    }
+
+
         mGridView.setOnItemClickListener(this);
         mGridView.setOnScrollListener(this);
-	    publicBtn.setOnClickListener(new View.OnClickListener() {
-		    @Override
-		    public void onClick(View view) {
-			    Intent intent=new Intent(getActivity(), FeedbackActivity.class);
-			    startActivity(intent);
-		    }
-	    });
-	    handler.postDelayed(runnable, 1000 * 1);
+
         return view;
     }
 

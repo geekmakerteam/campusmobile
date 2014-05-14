@@ -151,7 +151,8 @@ public class HomeworkRemarkActivity extends Activity implements OnClickListener{
 				post.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
 
 				HttpResponse response = client.execute(post);
-				if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
+				if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK)
+				{
 					Log.i("----ssss---", "111");
 					return Integer.valueOf(0);
 				}

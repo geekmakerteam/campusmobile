@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="bcs-sdk-java_1.4.5">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/bcs-sdk-java_1.4.5.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

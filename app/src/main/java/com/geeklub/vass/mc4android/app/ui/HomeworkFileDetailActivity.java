@@ -234,9 +234,21 @@ public class HomeworkFileDetailActivity extends Activity implements OnClickListe
 		ButterKnife.inject(this);
 
 		mBackBtn.setOnClickListener(this);
-		remarkButton.setOnClickListener(this);
 		downloadButton.setOnClickListener(this);
         fileonline.setOnClickListener(this);
+
+
+		UserPassword userPassword=SharedPreferencesUtils.readSharedPreferences(HomeworkFileDetailActivity.this);
+	   if(userPassword.getUserName().equals("xiaowang"))
+	   {
+		   remarkButton.setVisibility(View.VISIBLE);
+		   remarkButton.setOnClickListener(this);
+	   }
+	   else
+	   {
+           remarkButton.setVisibility(View.INVISIBLE);
+	   }
+
 		loadData();
 		runOnUiThread(runnable);
 	}
@@ -330,6 +342,7 @@ public class HomeworkFileDetailActivity extends Activity implements OnClickListe
 					e.printStackTrace();
 					Toast.makeText(HomeworkFileDetailActivity.this,"内部错误,请妳反馈给我!",Toast.LENGTH_SHORT).show();
 				}
+				break;
 			case R.id.right_btn:
                 Intent wintent=new Intent(HomeworkFileDetailActivity.this,HomeworkRemarkActivity.class);
 				wintent.putExtra("filename", fileName.getText().toString());
