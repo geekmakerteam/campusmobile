@@ -43,7 +43,6 @@ import com.geeklub.vass.mc4android.app.ui.teacher.CallNamesActivity;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.fb.FeedbackAgent;
 import android.os.StrictMode;
-
 import java.lang.reflect.Field;
 
 public class MainActivity extends ActionBarActivity
